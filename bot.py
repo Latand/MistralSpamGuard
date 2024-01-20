@@ -5,6 +5,7 @@ import betterlogging as bl
 from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
 from mistralai.async_client import MistralAsyncClient
+
 from tgbot.config import load_config
 from tgbot.handlers import routers_list
 
@@ -30,6 +31,7 @@ async def main():
     )
     dp.include_routers(*routers_list)
     print("Bot started!")
+    await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
 
 
