@@ -40,4 +40,4 @@ python bot.py
 The bot uses the Mistral AI API for detecting spam messages. When a message is identified as spam, the user is restricted from sending further messages, and the offending message is deleted.
 
 ## Contribution and Support
-Contributions to this project are welcome. Please submit pull requests or issues through the project's GitHub repository. For support, contact [your contact information].
+Contributions to this project are welcome. Please submit pull requests or issues through the project's GitHub repository. For support, contact [Latand](t.me/latand) on Telegram.
