@@ -1,9 +1,9 @@
 """Import all routers and add them to routers_list."""
 
-from .user import user_router
+from .spam import spam_router
 
 routers_list = [
-    user_router,
+    spam_router,
 ]
 
 __all__ = [
