@@ -12,11 +12,11 @@ This project is a Telegram bot designed to facilitate interactions within a spec
 ## Installation
 1. Clone the repository:
    ```
-   git clone [repository link]
+   git clone https://github.com/Latand/MistralSpamGuard
    ```
 2. Navigate to the project directory:
    ```
-   cd [project directory]
+   cd MistralSpamGuard
    ```
 3. Install required packages:
    ```
