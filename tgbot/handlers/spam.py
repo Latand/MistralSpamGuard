@@ -6,7 +6,7 @@ from tgbot.filters.spam_detection import SpamFilter
 spam_router = Router()
 
 
-@spam_router.message(F.chat.id == -1001041869725, SpamFilter())
+@spam_router.message(F.chat.id == -1001041869725, F.text.len() > 10, SpamFilter())
 async def spam_handler(message: Message):
     await message.chat.restrict(
         user_id=message.from_user.id,
