@@ -31,7 +31,12 @@ async def main():
     )
     dp.include_routers(*routers_list)
     print("Bot started!")
+    bot_admins = [
+        admin.user.id for admin in await bot.get_chat_administrators(-1001041869725)
+    ]
+
     await bot.delete_webhook(drop_pending_updates=True)
+    dp.workflow_data.update(bot_admins=bot_admins)
     await dp.start_polling(bot)
 
 
