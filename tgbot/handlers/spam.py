@@ -42,7 +42,7 @@ async def spam_handler(message: Message):
     )
     # message that user has been restricted
     await message.answer(
-        f"User {message.from_user.full_name} has been restricted for spamming. Write to admins if you think it's a mistake.",
+        f"User {message.from_user.full_name} has been restricted for spamming. Contact @latand if you think it's a mistake.",
         reply_markup=unban_kb(message.from_user.id),
     )
     await message.delete()
