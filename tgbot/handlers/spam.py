@@ -40,6 +40,8 @@ async def chat_admin_middleware(handler, event: CallbackQuery, data):
 
     storage: RedisStorage = data.get("storage")
     bot_admins = await storage.redis.get(BOT_ADMINS_STORAGE_KEY)
+    print(f"Bot admins: {bot_admins}")
+    logging.info(f"Bot admins: {bot_admins}")
     if not bot_admins:
         bot_admins = [
             admin.user.id for admin in await event.message.chat.get_administrators()
@@ -53,6 +55,7 @@ async def chat_admin_middleware(handler, event: CallbackQuery, data):
         except json.JSONDecodeError:
             logging.error(f"Can't decode bot_admins: {bot_admins}")
 
+    print(f"Bot admins: {bot_admins}")
     if event.from_user.id not in bot_admins:
         return await event.answer("This button is only for admins")
     return await handler(event, data)

@@ -63,3 +63,4 @@ venv.bak/
 .env
 cache/
 .vscode/
+tags
